@@ -20,4 +20,4 @@ footer{padding:20px 34px;border-top:1px solid var(--line);font-size:9px;letter-s
 .danger{border:0;color:#a04b3a;padding:4px 7px}
 @media(max-width:900px){header{padding:0 18px}.sync{display:none}main{padding:18px}.hero{align-items:start}.stats{grid-template-columns:1fr 1fr}.grid2,.projectgrid{grid-template-columns:1fr}.kanban{grid-template-columns:1fr 1fr}.hero h1{font-size:36px}.datebox{display:none}.tabs{overflow:auto}.tabs button{white-space:nowrap}}
 @media(max-width:580px){.brand span{display:none}.top-actionsbutton{padding:9px}.hero{padding:28px0}.stats{grid-template-columns:1fr 1fr}.kanban{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.hero h1,.sectionhead h1{font-size:31px}}
-html, body{min-height: 100%;}body{min-height: 100vh;display:flex;flex-direction:column;}main{flex: 1 0auto;width: 100%;margin: 0auto;padding-bottom: 20px;}footer{flex-shrink:0;margin-top:auto;}
+html,body{min-height:100%}body{min-height:100vh;display:flex;flex-direction:column}main{flex:1 0 auto;width:100%;margin:0 auto;padding-bottom:20px}footer{flex-shrink:0;margin-top:auto}
