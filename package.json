@@ -4,13 +4,7 @@
   "private": true,
   "description": "HAUSWERK architectural team planner",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "dependencies": {
-    "@aws-sdk/client-s3": "^3.0.0"
-  }
+  "scripts": {"start": "node server.js"},
+  "engines": {"node": ">=18"},
+  "dependencies": {"@aws-sdk/client-s3": "^3.0.0"}
 }
