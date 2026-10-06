@@ -23,7 +23,7 @@
   </section>
   <section id="tasks" class="view">
     <div class="sectionhead task-sectionhead"><div><p class="eyebrow">TASKS</p><h1>Задачи</h1></div><div class="task-tools"><span id="taskCount" class="count-label"></span><select id="taskFilter" class="compact-select"><option value="">Все статусы</option><option>К выполнению</option><option>В работе</option><option>На проверке</option><option>Готово</option></select></div></div>
-    <div class="card tablewrap tasks-card"><table><thead><tr><th>Задача</th><th>Проект</th><th>Ответственный</th><th>Статус</th><th>Приоритет</th><th>Срок</th><th>Готовность</th><th></th></tr></thead><tbody id="taskRows"></tbody></table><div id="taskEmpty" class="empty-state" hidden><b>Задач пока нет</b><span>Создайте первую задачу кнопкой «+ Новая задача».</span></div></div>
+    <div id="taskGroups" class="task-groups"></div><div id="taskEmpty" class="empty-state empty-panel" hidden><b>Задач пока нет</b><span>Создайте первую задачу кнопкой «+ Новая задача».</span></div>
   </section>
   <section id="board" class="view"><div class="sectionhead"><div><p class="eyebrow">KANBAN</p><h1>Доска</h1></div></div><div id="kanban" class="kanban"></div></section>
   <section id="projects" class="view"><div class="sectionhead"><div><p class="eyebrow">PROJECTS</p><h1>Проекты</h1></div><button id="addProject">+ Проект</button></div><div id="projectCards" class="projectgrid"></div><div id="projectEmpty" class="empty-state empty-panel" hidden><b>Проектов пока нет</b><span>Добавьте первый проект, чтобы создавать по нему задачи.</span></div></section>
