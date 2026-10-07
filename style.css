@@ -11,3 +11,20 @@
 .person-task-table th:first-child,.person-task-table td:first-child{width:41%}
 .person-task-table th:nth-child(2),.person-task-table td:nth-child(2){width:21%}
 @media(max-width:900px){.task-person-head{align-items:flex-start}.task-person-head>div{flex-direction:column;gap:3px}.task-person-name{font-size:16px}}
+
+.finance-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.finance-stat{background:var(--paper);border:1px solid var(--line);padding:22px}
+.finance-stat small{color:var(--muted)}
+.finance-stat b{display:block;font-size:32px;margin-top:12px;font-weight:500;letter-spacing:-.03em}
+.finance-stat span{display:block;font-size:11px;color:var(--muted);margin-top:5px}
+.person-task-table{min-width:1320px}
+.person-task-table th:first-child,.person-task-table td:first-child{width:30%}
+.person-task-table th:nth-child(2),.person-task-table td:nth-child(2){width:15%}
+.price-edit{display:flex;align-items:center;gap:5px}
+.price-edit input{width:90px;margin:0;padding:7px 8px}
+.price-edit span{font-size:12px;color:var(--muted)}
+.payment-select{width:122px;min-width:122px;margin:0;padding:7px 25px 7px 8px;background:#fff}
+.payment-select.is-paid{border-color:#9eb5a5;color:#3c684d;background:#f4f8f5}
+.task-row-actions{display:flex;align-items:center;gap:4px;white-space:nowrap}
+.edit-task{padding:5px 8px;font-size:10px}
+@media(max-width:900px){.finance-stats{grid-template-columns:1fr}.finance-stat b{font-size:28px}}
