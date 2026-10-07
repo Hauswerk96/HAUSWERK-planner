@@ -48,3 +48,60 @@
 .kanban{grid-template-columns:repeat(3,1fr)}
 @media(max-width:900px){.closed-sectionhead{align-items:flex-start;flex-direction:column}.kanban{grid-template-columns:1fr 1fr}}
 @media(max-width:580px){.kanban{grid-template-columns:1fr}}
+
+.workload-sectionhead{align-items:flex-end}
+.month-nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.month-nav strong{min-width:150px;text-align:center;font-size:14px;text-transform:capitalize}
+.month-nav button{padding:8px 11px}
+.work-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:12px}
+.work-stat{background:var(--paper);border:1px solid var(--line);padding:17px 18px}
+.work-stat small{display:block;color:var(--muted);font-size:10px}
+.work-stat b{display:block;font-size:24px;font-weight:550;margin-top:8px}
+.workload-calendar-card{padding:0;overflow:hidden}
+.work-calendar{min-width:2100px;border-collapse:separate;border-spacing:0}
+.work-calendar th,.work-calendar td{padding:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.work-calendar thead th{position:sticky;top:0;background:var(--paper);z-index:3}
+.work-calendar .employee-col{position:sticky;left:0;z-index:4;background:var(--paper);min-width:190px;width:190px;padding:12px 14px;text-align:left}
+.work-calendar tbody .employee-col{z-index:2}
+.work-calendar .employee-col b{display:block;font-size:12px}
+.work-calendar .employee-col small{display:block;color:var(--muted);font-size:9px;margin-top:4px;white-space:nowrap}
+.day-head{min-width:51px;width:51px;height:52px;text-align:center}
+.day-head b{display:block;font-size:12px;margin-top:7px}
+.day-head span{display:block;font-size:8px;color:var(--muted);margin-top:2px}
+.day-head.weekend,.day-cell.weekend{background:#ededE8}
+.day-cell{min-width:51px;width:51px;height:58px}
+.day-button{width:100%;height:58px;border:0;border-radius:0;padding:4px 3px;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
+.day-button:hover{background:#e4e5df}
+.day-button b{font-size:10px;font-weight:650;white-space:nowrap}
+.day-button small{font-size:7px;color:var(--muted);max-width:47px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.day-button.has-work{background:#f6f7f3}
+.day-button.absence{background:#ece8df}
+.day-button.absence.sick{background:#f1e7e4}
+.day-button.absence.vacation{background:#e7ece8}
+.day-button.absence.dayoff{background:#ecebea}
+.sum-col,.sum-cell{min-width:58px;width:58px;text-align:center;background:var(--paper)}
+.sum-cell b{font-size:11px}
+.sum-cell.over{color:var(--warn)}
+.project-hours-card{margin-top:12px;padding:0}
+.project-hours-card .cardhead{padding:18px 20px 10px;margin:0}
+.project-hours-note{font-size:10px}
+.project-hours-table{min-width:650px}
+.project-hours-table th:first-child,.project-hours-table td:first-child{width:45%}
+.hours-over{color:var(--warn)}
+.compact-empty{min-height:110px}
+.timesheet-dialog{width:min(760px,calc(100% - 30px))}
+.timesheet-dialog-sub{margin:5px 0 0;font-size:11px}
+.timesheet-entries{border:1px solid var(--line);margin-bottom:20px}
+.time-entry-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 13px;border-top:1px solid var(--line)}
+.time-entry-row:first-child{border-top:0}
+.time-entry-row>div:first-child{min-width:0}
+.time-entry-row b{display:block;font-size:12px}
+.time-entry-row span{display:block;color:var(--muted);font-size:10px;margin-top:3px;white-space:normal}
+.time-entry-row>div:last-child{display:flex;gap:5px;flex:none}
+.time-entry-row button{padding:6px 8px;font-size:10px}
+.time-entry-empty{padding:16px;color:var(--muted);font-size:11px}
+.timesheet-form-title{font-size:11px;font-weight:650;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.timesheet-note{grid-column:1/-1}
+[hidden]{display:none!important}
+@media(max-width:1100px){.work-stats{grid-template-columns:repeat(3,1fr)}.workload-sectionhead{align-items:flex-start;flex-direction:column}.month-nav{justify-content:flex-start}}
+@media(max-width:650px){.work-stats{grid-template-columns:1fr 1fr}.month-nav strong{order:-1;width:100%;text-align:left}.timesheet-dialog .formgrid{grid-template-columns:1fr}}
