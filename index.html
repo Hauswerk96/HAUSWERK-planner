@@ -14,7 +14,7 @@
 </header>
 <main>
   <nav class="tabs">
-    <button class="active" data-view="overview">Обзор</button><button data-view="tasks">Задачи</button><button data-view="board">Доска</button><button data-view="projects">Проекты</button><button data-view="team">Команда</button><button data-view="workload">Загрузка</button>
+    <button class="active" data-view="overview">Обзор</button><button data-view="tasks">Задачи</button><button data-view="closed">Закрытые задачи</button><button data-view="board">Доска</button><button data-view="projects">Проекты</button><button data-view="team">Команда</button><button data-view="workload">Загрузка</button>
   </nav>
   <section id="overview" class="view active">
     <div class="hero"><div><p class="eyebrow">HAUSWERK / ARCHITECTURE</p><h1>Архитектурный отдел</h1><p>Проекты, задачи, сроки и загрузка команды — в одном рабочем пространстве.</p></div><div class="datebox"><small>Сегодня</small><b id="today"></b></div></div>
@@ -23,8 +23,12 @@
     <div class="grid2"><article class="card"><div class="cardhead"><h2>Ближайшие сроки</h2></div><div id="deadlines"></div></article><article class="card"><div class="cardhead"><h2>Проекты</h2></div><div id="projectMini"></div></article></div>
   </section>
   <section id="tasks" class="view">
-    <div class="sectionhead task-sectionhead"><div><p class="eyebrow">TASKS</p><h1>Задачи</h1></div><div class="task-tools"><span id="taskCount" class="count-label"></span><select id="taskFilter" class="compact-select"><option value="">Все статусы</option><option>К выполнению</option><option>В работе</option><option>На проверке</option><option>Готово</option></select></div></div>
+    <div class="sectionhead task-sectionhead"><div><p class="eyebrow">TASKS</p><h1>Задачи</h1></div><div class="task-tools"><span id="taskCount" class="count-label"></span><select id="taskFilter" class="compact-select"><option value="">Все статусы</option><option>К выполнению</option><option>В работе</option><option>На проверке</option></select></div></div>
     <div id="taskGroups" class="task-groups"></div><div id="taskEmpty" class="empty-state empty-panel" hidden><b>Задач пока нет</b><span>Создайте первую задачу кнопкой «+ Новая задача».</span></div>
+  </section>
+  <section id="closed" class="view">
+    <div class="sectionhead closed-sectionhead"><div><p class="eyebrow">ARCHIVE</p><h1>Закрытые задачи</h1><p class="muted">Архив выполненных задач с датой закрытия и финансовым статусом.</p></div><span id="closedTaskCount" class="count-label"></span></div>
+    <div class="card tablewrap closed-tasks-card"><table id="closedTasksTable"><thead><tr><th>Задача / проект</th><th>Исполнитель</th><th>Закрыта</th><th>Цена</th><th>Оплата</th><th></th></tr></thead><tbody id="closedTaskRows"></tbody></table><div id="closedTaskEmpty" class="empty-state" hidden><b>Закрытых задач пока нет</b><span>Когда задача получает статус «Готово», она автоматически появится здесь.</span></div></div>
   </section>
   <section id="board" class="view"><div class="sectionhead"><div><p class="eyebrow">KANBAN</p><h1>Доска</h1></div></div><div id="kanban" class="kanban"></div></section>
   <section id="projects" class="view"><div class="sectionhead"><div><p class="eyebrow">PROJECTS</p><h1>Проекты</h1></div><button id="addProject">+ Проект</button></div><div id="projectCards" class="projectgrid"></div><div id="projectEmpty" class="empty-state empty-panel" hidden><b>Проектов пока нет</b><span>Добавьте первый проект, чтобы создавать по нему задачи.</span></div></section>
