@@ -35,3 +35,16 @@
 .overview-person-head b{font-size:12px;letter-spacing:.01em}
 .overview-person-head span{font-size:10px;color:var(--muted);white-space:nowrap}
 .overview-person-group .item{padding:11px 0}
+
+.closed-sectionhead{align-items:flex-end}
+.closed-tasks-card{padding:0}
+.closed-tasks-card table{min-width:980px}
+.closed-tasks-card td:first-child small{display:block;color:var(--muted);margin-top:4px}
+.closed-tasks-card th:first-child,.closed-tasks-card td:first-child{width:36%}
+.closed-tasks-card th:nth-child(2),.closed-tasks-card td:nth-child(2){width:17%}
+.closed-tasks-card th:nth-child(3),.closed-tasks-card td:nth-child(3){width:12%}
+.restore-task{padding:7px 9px;font-size:10px;white-space:nowrap}
+#closedTaskCount{padding-bottom:5px}
+.kanban{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.closed-sectionhead{align-items:flex-start;flex-direction:column}.kanban{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.kanban{grid-template-columns:1fr}}
