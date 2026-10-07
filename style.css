@@ -28,3 +28,10 @@
 .task-row-actions{display:flex;align-items:center;gap:4px;white-space:nowrap}
 .edit-task{padding:5px 8px;font-size:10px}
 @media(max-width:900px){.finance-stats{grid-template-columns:1fr}.finance-stat b{font-size:28px}}
+
+.overview-person-group{border-top:1px solid var(--line);padding-top:10px;margin-top:10px}
+.overview-person-group:first-child{border-top:0;padding-top:0;margin-top:0}
+.overview-person-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:2px 0 5px}
+.overview-person-head b{font-size:12px;letter-spacing:.01em}
+.overview-person-head span{font-size:10px;color:var(--muted);white-space:nowrap}
+.overview-person-group .item{padding:11px 0}
