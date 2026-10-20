@@ -13,7 +13,7 @@ const S3_REGION=process.env.S3_REGION||'ru-1';
 const USE_S3=Boolean(S3_BUCKET);
 const s3=USE_S3?new S3Client({region:S3_REGION,endpoint:S3_ENDPOINT}):null;
 
-const seed=()=>({projects:[],people:[],tasks:[],workload:[],meta:{updatedAt:new Date().toISOString()}});
+const seed=()=>({projects:[],people:[],tasks:[],workload:[],timesheet:[],meta:{updatedAt:new Date().toISOString()}});
 let state=null;
 let writeQueue=Promise.resolve();
 
@@ -66,10 +66,29 @@ function json(res,code,body){
 }
 function parseBody(req){
   return new Promise((resolve,reject)=>{
-    let body='';
-    req.on('data',c=>{body+=c;if(body.length>2e6){reject(new Error('Request body too large'));req.destroy()}});
-    req.on('end',()=>{try{resolve(body?JSON.parse(body):{})}catch(e){reject(e)}});
-    req.on('error',reject);
+    const chunks=[];
+    let size=0;
+    let stopped=false;
+    req.on('data',c=>{
+      if(stopped)return;
+      const chunk=Buffer.isBuffer(c)?c:Buffer.from(c);
+      size+=chunk.length;
+      if(size>2e6){
+        stopped=true;
+        reject(new Error('Request body too large'));
+        req.destroy();
+        return;
+      }
+      chunks.push(chunk);
+    });
+    req.on('end',()=>{
+      if(stopped)return;
+      try{
+        const body=Buffer.concat(chunks).toString('utf8');
+        resolve(body?JSON.parse(body):{});
+      }catch(e){reject(e)}
+    });
+    req.on('error',e=>{if(!stopped)reject(e)});
   });
 }
 function serveStatic(req,res){
