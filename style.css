@@ -105,3 +105,7 @@
 [hidden]{display:none!important}
 @media(max-width:1100px){.work-stats{grid-template-columns:repeat(3,1fr)}.workload-sectionhead{align-items:flex-start;flex-direction:column}.month-nav{justify-content:flex-start}}
 @media(max-width:650px){.work-stats{grid-template-columns:1fr 1fr}.month-nav strong{order:-1;width:100%;text-align:left}.timesheet-dialog .formgrid{grid-template-columns:1fr}}
+
+.constructor-cost-edit input{width:90px}
+.person-task-table{min-width:1450px}
+.closed-tasks-card table{min-width:1100px}
