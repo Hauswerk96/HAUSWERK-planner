@@ -12,7 +12,7 @@
 .person-task-table th:nth-child(2),.person-task-table td:nth-child(2){width:21%}
 @media(max-width:900px){.task-person-head{align-items:flex-start}.task-person-head>div{flex-direction:column;gap:3px}.task-person-name{font-size:16px}}
 
-.finance-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.finance-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px}
 .finance-stat{background:var(--paper);border:1px solid var(--line);padding:22px}
 .finance-stat small{color:var(--muted)}
 .finance-stat b{display:block;font-size:32px;margin-top:12px;font-weight:500;letter-spacing:-.03em}
